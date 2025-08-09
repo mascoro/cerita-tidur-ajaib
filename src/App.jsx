@@ -55,7 +55,7 @@ const App = () => {
         `;
 
         try {
-            const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
+            const apiKey = "AIzaSyBBCrBOMvctVf5F1q9YhFvZwlGhwVy_iug";
             const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=${apiKey}`;
             
             const response = await fetch(apiUrl, {
