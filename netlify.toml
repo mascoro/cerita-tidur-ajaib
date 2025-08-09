@@ -1,0 +1,16 @@
+# Pengaturan Build untuk Netlify
+[build]
+  command = "npm run build"
+  publish = "dist" # Vite secara default membuat folder 'dist'
+
+# Aturan pengalihan untuk Single Page Application (React)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Aturan header untuk memperbaiki masalah MIME type pada file JavaScript
+[[headers]]
+  for = "/assets/*.js"
+  [headers.values]
+    Content-Type = "application/javascript"
